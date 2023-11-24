@@ -6,10 +6,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "barryvdh/laravel-dompdf": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/socialite": "^5.6",
+        "laravel/tinker": "^2.8",
+        "laravel/ui": "^4.2",
+        "maatwebsite/excel": "^3.1",
+        "snapappointments/bootstrap-select": "^1.13",
+        "socialiteproviders/okta": "^4.2",
+        "spatie/laravel-activitylog": "^4.7"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

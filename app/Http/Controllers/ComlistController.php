@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Balance;
 use App\Models\Comlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ComlistController extends Controller
 {
@@ -12,7 +14,21 @@ class ComlistController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $comlist = Comlist::where('user_id', $user->id)->get();
+
+        $balances = Balance::where('user_id', $user->id)->get();
+        $subsets = $balances->map(function ($balance) {
+            return collect($balance->toArray())
+
+                ->only(['value', 'leavetype_id'])
+                ->all();
+        });
+
+        $leave18 = $subsets->firstwhere('leavetype_id', '18');
+        $balance18 = round($leave18['value'], 3);
+
+        return view('comlists.index', ['comlists' => $comlist, 'balance18' => $balance18]);
     }
 
     /**

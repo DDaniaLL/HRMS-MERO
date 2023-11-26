@@ -59,7 +59,7 @@ class BalanceExport implements FromCollection, WithHeadings, WithMapping
                 $user->name,
                 $user->position,
                 $user->department,
-                $user->office,
+                // $user->office,
                 $user->balances->first()->value, //'Annual',
                 $user->balances->get(1)->value, // Sick SC
                 $user->balances->get(2)->value, // Sick DC
@@ -83,7 +83,7 @@ class BalanceExport implements FromCollection, WithHeadings, WithMapping
                 $user->name,
                 $user->position,
                 $user->department,
-                $user->office,
+                // $user->office,
                 $user->balances->first()->value, //'Annual',
                 $user->balances->get(10)->value, // R&R
                 $user->balances->get(11)->value, // Home
@@ -104,7 +104,7 @@ class BalanceExport implements FromCollection, WithHeadings, WithMapping
             'Name',
             'Position',
             'Departmenet',
-            'Office',
+            // 'Office',
             'Annual',
             'Sick SC / R&R',
             'Sick DC / Home leave',

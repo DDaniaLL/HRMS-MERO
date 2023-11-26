@@ -52,7 +52,7 @@ class User extends Authenticatable
         'contract',
         'joined_date',
         'email',
-        'office',
+        // 'office',
         'password',
         'linemanager',
         'usertype_id',

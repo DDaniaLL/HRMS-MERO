@@ -31,9 +31,9 @@
                                 <tr style=" background-color: #ffb678 !important;">
                                   <th style="width: 3%" scope="col">{{__('hrApprovalOvertime.id')}}</th>
                                     <th style="width: 3%" scope="col">{{__('hrApprovalOvertime.name')}}</th>
-                                    @if ($hruser->office == "CO-Erbil")
+                                    {{-- @if ($hruser->office == "CO-Erbil")
                                     <th style="width: 10%" class="text-center" scope="col">{{__('hrApprovalLeave.office')}}</th>
-                                    @endif
+                                    @endif --}}
                                     <th class="text-center" scope="col">{{__('hrApprovalOvertime.type')}}</th>
                                     <th class="text-center" scope="col">{{__('hrApprovalOvertime.date')}}</th>
                                     <th class="text-center" scope="col">{{__('hrApprovalOvertime.startHour')}}</th>
@@ -66,9 +66,9 @@
                                   
                                   
                                   </td>
-                                    @if ($hruser->office == "CO-Erbil")
+                                    {{-- @if ($hruser->office == "CO-Erbil")
                                   <td class="text-center">{{ $overtime->user->office }}</td>
-                                    @endif
+                                    @endif --}}
                                     <td class="text-center">{{ $overtime->type }}</td>
                                     @php
                               $dayname = Carbon\Carbon::parse($overtime->date)->format('l');

@@ -47,7 +47,7 @@
                                 <br>
                                 <strong>{{__('welcome.contractType')}}: </strong> {{$user->contract}}
                                 <br>
-                                <strong>{{__('welcome.office')}}: </strong> {{$user->office}}
+                                {{-- <strong>{{__('welcome.office')}}: </strong> {{$user->office}} --}}
                               </div>
                               <div class="col">
 

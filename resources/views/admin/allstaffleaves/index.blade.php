@@ -39,9 +39,9 @@
                             <tr  style=" background-color: #ffb678 !important;">
                                 <th style="width: 3%" class="text-center" scope="col">{{__('allStaffLeaves.id')}}</th>
                                 <th style="width: 10%" scope="col">{{__('allStaffLeaves.name')}}</th>
-                                @if ($hruser->office == "CO-Erbil")
+                                {{-- @if ($hruser->office == "CO-Erbil")
                                     <th style="width: 10%" class="text-center" scope="col">{{__('hrApprovalLeave.office')}}</th>
-                                    @endif
+                                    @endif --}}
                                 <th style="width: 10%" class="text-center" scope="col">{{__('allStaffLeaves.leaveType')}}</th>
                                 <th style="width: 10%" class="text-center" scope="col">{{__('allStaffLeaves.startDate')}}</th>
                                 <th style="width: 10%" class="text-center" scope="col">{{__('allStaffLeaves.endDate')}}</th>
@@ -68,9 +68,9 @@
 </td>
 
                               
-                              @if ($hruser->office == "CO-Erbil")
+                              {{-- @if ($hruser->office == "CO-Erbil")
                                   <td class="text-center">{{ $leave->user->office }}</td>
-                                    @endif
+                                    @endif --}}
                               <td class="text-center">{{ __("databaseLeaves.{$leave->leavetype->name}") }}</td>
                              
                               @php

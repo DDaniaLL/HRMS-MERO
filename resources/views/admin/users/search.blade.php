@@ -38,7 +38,7 @@
                                               <th style="width: 20%" scope="col">{{__('allUsers.name')}}</th>
                                               <th style="width: 10%" scope="col">{{__('allUsers.employeeId')}}</th>
                                               <th style="width: 10%" scope="col">{{__('allUsers.position')}}</th>
-                                              <th style="width: 10%" scope="col">{{__('allUsers.office')}}</th>
+                                              {{-- <th style="width: 10%" scope="col">{{__('allUsers.office')}}</th> --}}
                                               <th style="width: 10%" scope="col">{{__('allUsers.joinDate')}}</th>
                                               <th style="width: 20%" scope="col">{{__('allUsers.lineManager')}}</th>
                                          
@@ -56,7 +56,7 @@
                                                     </td>
                                                   <td>{{ $user->employee_number }}</td>
                                                   <td>{{ $user->position }}</td>
-                                                  <td>{{ $user->office }}</td>
+                                                  {{-- <td>{{ $user->office }}</td> --}}
                                                   <td>{{ $user->joined_date }}</td>
                                                   <td>{{ $user->linemanager }}</td>
                                                
@@ -70,7 +70,7 @@
                                               <th style="width: 20%" scope="col">{{__('allUsers.name')}}</th>
                                               <th style="width: 10%" scope="col">{{__('allUsers.employeeId')}}</th>
                                               <th style="width: 10%" scope="col">{{__('allUsers.position')}}</th>
-                                              <th style="width: 10%" scope="col">{{__('allUsers.office')}}</th>
+                                              {{-- <th style="width: 10%" scope="col">{{__('allUsers.office')}}</th> --}}
                                               <th style="width: 10%" scope="col">{{__('allUsers.joinDate')}}</th>
                                               <th style="width: 20%" scope="col">{{__('allUsers.lineManager')}}</th>
                                               

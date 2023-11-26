@@ -55,7 +55,7 @@ class UsersExport implements FromCollection, WithHeadings, WithMapping
 
             $user->employee_number,
             $user->name,
-            $user->office,
+            // $user->office,
             $user->contract,
             $user->position,
             $user->department,
@@ -76,7 +76,7 @@ class UsersExport implements FromCollection, WithHeadings, WithMapping
 
             'Employee Number',
             'Name',
-            'office',
+            // 'office',
             'Contract',
             'Position',
             'Department',

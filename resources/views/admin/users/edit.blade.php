@@ -49,7 +49,7 @@
                                             $authuser = Auth::user();
                                             @endphp
 
-                                            @if ($authuser->office == "CO-Erbil")
+                                            {{-- @if ($authuser->office == "CO-Erbil")
                                             <div class="form-group col-sm-6 flex-column d-flex {{ $errors->has('office') ? ' has-danger' : '' }}"> <label class="dropdown form-control-label required px-1 {{ $errors->has('joined_date') ? ' is-invalid' : '' }}">{{__('edituser.office')}}</label>
                                         <select class="form-control form-outline"  id="office" name="office" aria-label="Default select example" >
                                           
@@ -66,7 +66,7 @@
                                                 <span id="office-error" class="error text-danger" for="input-office">{{ $errors->first('office') }}</span>
                                                @endif
                                         </div>
-                                        @endif
+                                        @endif --}}
 
                                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-1">{{__('edituser.department')}}</label> <input class="form-control form-outline" type="text" id="department"  value="{{ $user->department }}" name="department" placeholder="" > </div>
 

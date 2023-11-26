@@ -494,25 +494,8 @@ class OvertimeController extends Controller
     public function export()
     {
         $hruser = Auth::user();
-        if ($hruser->office == "AO2")
-        {
-            $overtimes = Overtime::all();
-
-        }
-        else
-        {
-        $staffwithsameoffice = User::where('office',$hruser->office)->get();
-            if (count($staffwithsameoffice))
-            {
-                $hrsubsets = $staffwithsameoffice->map(function ($staffwithsameoffice) {
-                    return collect($staffwithsameoffice->toArray())
-                        ->only(['id'])
-                        ->all();
-                });
-                $overtimes= Overtime::wherein('user_id', $hrsubsets)->get(); 
+        $overtimes = Overtime::all();
     
-            }
-        }
         return Excel::download(new OvertimesExport($overtimes), 'overtimes.xlsx');
     }
 
@@ -559,7 +542,7 @@ class OvertimeController extends Controller
         $overtimetype = $request->overtime;
         $start_date=$request->start_date;
         $end_date=$request->end_date;
-        $office = $request->office;
+        // $office = $request->office;
         $status = $request->status;
         $staffstatus = $request->staffstatus;
         $linemanager = $request->linemanager;
@@ -594,15 +577,7 @@ class OvertimeController extends Controller
             $staffstatuse = $staffstatus;
         }
 
-        if ($office == Null)
-        {
-            $officee = ['AO2','AO3','AO4','AO6','AO7'];
-        }
-
-        else if ($office !== Null)
-        {
-            $officee = $office;
-        }
+       
         
         if ($status == Null)
         {
@@ -628,9 +603,8 @@ class OvertimeController extends Controller
         if ($request->name == null)
         {
 
-            if ($hruser->office == "AO2") {
 
-                $staffwithsameoffice = User::whereIn('office',$officee)->WhereIn('status', $staffstatuse)->get();
+                $staffwithsameoffice = User::WhereIn('status', $staffstatuse)->get();
                 if (count($staffwithsameoffice))
                 {
                     $hrsubsets = $staffwithsameoffice->map(function ($staffwithsameoffice) {
@@ -644,22 +618,8 @@ class OvertimeController extends Controller
                     ])->WhereIn('type', $overtimetypee)->WhereIn('status', $statuse)->get();
                 }
               
-            }
-            else {
-                $staffwithsameoffice = User::where('office',$hruser->office)->WhereIn('status', $staffstatuse)->get();
-            if (count($staffwithsameoffice))
-            {
-                $hrsubsets = $staffwithsameoffice->map(function ($staffwithsameoffice) {
-                    return collect($staffwithsameoffice->toArray())
-                        ->only(['id'])
-                        ->all();
-                });
-                $overtimes = Overtime::whereIn('user_id', $hrsubsets)->where([
-                    ['date', '>=', $start_datee],
-                    ['date', '<=', $end_datee],
-                ])->WhereIn('type', $overtimetypee)->WhereIn('status', $statuse)->get();
-            }       
-            }
+         
+          
         }
         
         else

@@ -23,7 +23,7 @@ class BalancesImport implements ToCollection, WithHeadingRow
                     'contract' => $row['contract'],
                     'position' => $row['position'],
                     'grade' => $row['grade'],
-                    'office' => $row['office'],
+                    // 'office' => $row['office'],
                     'department' => $row['department'],
                     'linemanager' => $row['linemanager'],
                     'hradmin' => $row['hradmin'],

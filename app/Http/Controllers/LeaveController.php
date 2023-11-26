@@ -2406,24 +2406,8 @@ elseif ($leave->leavetype_id == '25') {
     public function export()
     {
         $hruser = Auth::user();
-        if ($hruser->office == "AO2")
-        {
-            $leaves= Leave::all();
-        }
-        else
-        {
-        $staffwithsameoffice = User::where('office',$hruser->office)->get();
-            if (count($staffwithsameoffice))
-            {
-                $hrsubsets = $staffwithsameoffice->map(function ($staffwithsameoffice) {
-                    return collect($staffwithsameoffice->toArray())
-                        ->only(['id'])
-                        ->all();
-                });
-                $leaves = Leave::wherein('user_id', $hrsubsets)->get(); 
-    
-    }
-}
+        $leaves= Leave::all();
+  
     return Excel::download(new LeavesExport($leaves), 'leaves.xlsx');
     }
 

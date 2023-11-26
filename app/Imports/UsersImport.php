@@ -17,7 +17,7 @@ class UsersImport implements ToModel, WithHeadingRow
             'employee_number' => $row['employee'],
             'contract' => $row['contract'],
             'position' => $row['position'],
-            'office' => $row['office'],
+            // 'office' => $row['office'],
             'department' => $row['department'],
             'linemanager' => $row['linemanager'],
             'grade'=>$row['grade'],

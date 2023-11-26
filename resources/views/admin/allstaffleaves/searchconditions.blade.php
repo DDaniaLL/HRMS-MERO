@@ -54,7 +54,7 @@ $hruser = Auth::user();
                                         </datalist>
                                      </div>
 
-                                    @if ($hruser->office == "CO-Erbil")    
+                                    {{-- @if ($hruser->office == "CO-Erbil")    
                                      <div class="form-group col-sm-6 flex-column d-flex">
                                         <label  class=" form-control-label  px-1">{{__('advancedSearchLeave.staffoffice')}}</label>
                                         <select
@@ -71,7 +71,7 @@ $hruser = Auth::user();
 
                                                 </select>
                                      </div>
-                                     @endif
+                                     @endif --}}
                                      
                                       </div>
 

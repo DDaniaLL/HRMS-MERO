@@ -53,7 +53,7 @@ $hruser = Auth::user();
                                             @endforeach
                                         </datalist>
                                      </div>
-                                     @if ($hruser->office == "CO-Erbil")
+                                     {{-- @if ($hruser->office == "CO-Erbil")
                                      <div class="form-group {{ $errors->has('office') ? ' has-danger' : '' }} col-sm-6 flex-column d-flex">
                                         <label class="form-control-label  px-1">{{__('advancedSearchLeave.staffoffice')}}</label>
                                         <select
@@ -69,7 +69,7 @@ $hruser = Auth::user();
 
                                                 </select>
                                      </div>
-                                     @endif
+                                     @endif --}}
                                       </div>
                                       <div class="row justify-content-between text-left">
                                       <div class="form-group col-sm-6 flex-column d-flex">

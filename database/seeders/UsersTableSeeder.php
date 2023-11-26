@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
             'contract' => 'National',
             'usertype_id' => '2',
             'position' => 'HR Manager',
-            'office' => 'CO-Erbil',
+            // 'office' => 'CO-Erbil',
             'department' => 'HR',
             'grade' => '4',
             'hradmin' => 'yes',

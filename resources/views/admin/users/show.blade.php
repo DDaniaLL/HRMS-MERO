@@ -104,7 +104,7 @@
                                 <br>
                                 <strong>{{__('showuser.contractType')}}: </strong> {{__("databaseLeaves.$user->contract")}}
                                 <br>
-                                <strong>{{__('showuser.office')}}: </strong> {{$user->office}}
+                                {{-- <strong>{{__('showuser.office')}}: </strong> {{$user->office}} --}}
                                 <br>
                                 <strong>{{__('showuser.prob')}}: </strong> 
                            
@@ -368,7 +368,7 @@
                           <!-- <th style="width: 20%" class="text-center" scope="col">{{__('staffleaves.email')}}</th> -->
                           <th style="width: 20%" class="text-center" scope="col">{{__('staffleaves.employeeNumber')}}</th>
                           {{-- <th style="width: 20%" class="text-center" scope="col">{{__('staffleaves.balance')}}</th> --}}
-                          <th style="width: 20%" class="text-center" scope="col">{{__('allUsers.office')}}</th>
+                          {{-- <th style="width: 20%" class="text-center" scope="col">{{__('allUsers.office')}}</th> --}}
                           <th style="width: 20%" class="text-center" scope="col">{{__('staffleaves.position')}}</th>
                           <th style="width: 20%" class="text-center" scope="col">{{__('staffleaves.joinedDate')}}</th>
 
@@ -391,7 +391,7 @@
                             @if ($employee->contract !== "Service")
                             {{ $employee->balances->first()->value }}/{{ $employee->balances->get(1)->value }}/{{ $employee->balances->get(17)->value }}</td>
                             @endif --}}
-                            <td class="text-center">{{ $employee->office }}</td>
+                            {{-- <td class="text-center">{{ $employee->office }}</td> --}}
                           <td class="text-center">{{ $employee->position }}</td>
                           <td class="text-center">{{ $employee->joined_date }}</td>
 

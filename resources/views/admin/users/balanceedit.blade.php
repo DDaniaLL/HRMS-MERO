@@ -38,90 +38,116 @@
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label px-1">{{__('showuser.homeleave')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="homeleave" value="{{$balance12}}" name="homeleave" placeholder="">
-
+                                                <input class="form-control form-outline " type="text" id="homeleave" value="{{$balance16}}" name="homeleave" placeholder="">
                                             </div>
-                                            <div class="form-group col-sm-6 flex-column d-flex">
+                                            {{-- <div class="form-group col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label px-1">{{__('showuser.r&r')}}:</label>
                                                 <input class="form-control form-outline" type="text" id="rr" value="{{$balance11}}" name="rr" placeholder="" >
-                                            </div>
+                                            </div> --}}
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label px-1">{{__('showuser.annualLeave')}}:</label>
                                                 <input class="form-control form-outline " type="text" id="annualLeave" value="{{$balance1}}" name="annualLeave" placeholder="">
-
                                             </div>
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                               <label class="form-control-label px-1">{{__('showuser.wfh')}}:</label>
                                               <input class="form-control form-outline " type="text" id="wfh" value="{{$balance22}}" name="wfh" placeholder="">
-
                                           </div>
+                                          <div class="row justify-content-between text-left">
+                                            <div class="form-group col-sm-6 flex-column d-flex">
+                                              <label class="form-control-label px-1">{{__('showuser.sickLeaveSC')}}:</label>
+                                              <input class="form-control form-outline" type="text" id="sickLeaveSC" value="{{$balance4}}" name="sickLeaveSC" placeholder="" >
+                                          </div>
+                                          <div class="form-group col-sm-6 flex-column d-flex">
+                                            <label class="form-control-label px-1">{{__('showuser.sickLeaveDC')}}:</label>
+                                             <input class="form-control form-outline" type="text" id="sickLeaveDC" value="{{$balance7}}" name="sickLeaveDC" placeholder="" >
+                                            </div>
                                         </div>
                                         
+                                        </div>
+                                        <div class="row justify-content-between text-left">
+                                          <div class="form-group  col-sm-6 flex-column d-flex">
+                                              <label class="form-control-label  px-1">{{__('showuser.maternityLeave')}}:</label>
+                                              <input class="form-control form-outline " type="text" id="maternityLeave" value="{{$balance11}}" name="maternityLeave" placeholder="" >
+                                          </div>
+                                          <div class="form-group  col-sm-6 flex-column d-flex">
+                                              <label class="form-control-label  px-1">{{__('showuser.paternityLeave')}}:</label>
+                                              <input class="form-control form-outline " type="text" id="paternityLeave"  value="{{$balance12}}" name="paternityLeave" placeholder="" >
+                                          </div>
+                                      </div>
+                                      <div class="row justify-content-between text-left">
+                                        <div class="form-group  col-sm-6 flex-column d-flex">
+                                          <label class="form-control-label  px-1">{{__('showuser.welfareLeave')}}:</label>
+                                          <input class="form-control form-outline " type="text" id="showuser.welfareLeave" value="{{$balance13}}" name="compassionateSecondDegree" placeholder="" >
+                                      </div>
+                                        {{-- <div class="form-group  col-sm-6 flex-column d-flex">
+                                            <label class="form-control-label  px-1">{{__('showuser.paternityLeave')}}:</label>
+                                            <input class="form-control form-outline " type="text" id="paternityLeave"  value="{{$balance12}}" name="paternityLeave" placeholder="" >
+                                        </div> --}}
+                                    </div>
                                         @endif
                                         @if ($user->contract == "National")
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label px-1">{{__('showuser.annualLeave')}}:</label>
                                                 <input class="form-control form-outline " type="text" id="annualLeave" value="{{$balance1}}" name="annualLeave" placeholder="">
-
                                             </div>
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label px-1">{{__('showuser.sickLeaveSC')}}:</label>
-                                                <input class="form-control form-outline" type="text" id="sickLeaveSC" value="{{$balance2}}" name="sickLeaveSC" placeholder="" >
+                                                <input class="form-control form-outline" type="text" id="sickLeaveSC" value="{{$balance4}}" name="sickLeaveSC" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                                  <label class="form-control-label px-1">{{__('showuser.sickLeaveDC')}}:</label>
-                                                  <input class="form-control form-outline" type="text" id="sickLeaveDC" value="{{$balance3}}" name="sickLeaveDC" placeholder="" >
+                                                  <input class="form-control form-outline" type="text" id="sickLeaveDC" value="{{$balance7}}" name="sickLeaveDC" placeholder="" >
                                                  </div>
                                             <div class="form-group col-sm-6 flex-column d-flex">
                                                  <label class="form-control-label px-1">{{__('showuser.marriageLeave')}}:</label>
-                                                 <input class="form-control form-outline" type="text" id="marriageLeave" value="{{$balance5}}" name="marriageLeave" placeholder="" >
+                                                 <input class="form-control form-outline" type="text" id="marriageLeave" value="{{$balance10}}" name="marriageLeave" placeholder="" >
                                                  </div>
                                         </div>
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group  col-sm-6 flex-column d-flex">
-                                                <label class="form-control-label  px-1">{{__('showuser.compassionateSecondDegree')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="compassionateSecondDegree" value="{{$balance7}}" name="compassionateSecondDegree" placeholder="" >
-
+                                                <label class="form-control-label  px-1">{{__('showuser.welfareLeave')}}:</label>
+                                                <input class="form-control form-outline " type="text" id="showuser.welfareLeave" value="{{$balance13}}" name="compassionateSecondDegree" placeholder="" >
                                             </div>
-                                            <div class="form-group  col-sm-6 flex-column d-flex">
+                                            {{-- <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.unpaidLeave')}}:</label>
                                                 <input class="form-control form-outline " type="text" id="unpaidLeave"  value="{{$balance15}}" name="unpaidLeave" placeholder="" >
-
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.maternityLeave')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="maternityLeave" value="{{$balance8}}" name="maternityLeave" placeholder="" >
-
+                                                <input class="form-control form-outline " type="text" id="maternityLeave" value="{{$balance11}}" name="maternityLeave" placeholder="" >
                                             </div>
                                             <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.paternityLeave')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="paternityLeave"  value="{{$balance9}}" name="paternityLeave" placeholder="" >
-
+                                                <input class="form-control form-outline " type="text" id="paternityLeave"  value="{{$balance12}}" name="paternityLeave" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.PilgrimageLeave')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="PilgrimageLeave" value="{{$balance10}}" name="PilgrimageLeave" placeholder="" >
+                                                <input class="form-control form-outline " type="text" id="PilgrimageLeave" value="{{$balance14}}" name="PilgrimageLeave" placeholder="" >
 
                                             </div>
                                             <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.compansetion')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="compansetion"  value="{{$balance18}}" name="compansetion" placeholder="" >
+                                                <input class="form-control form-outline " type="text" id="compansetion"  value="{{$balance20}}" name="compansetion" placeholder="" >
 
                                             </div>
                                         </div>
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group  col-sm-6 flex-column d-flex">
-                                                <label class="form-control-label  px-1">{{__('createLeave.wfh')}}:</label>
+                                                <label class="form-control-label  px-1">{{__('showuser.wfh')}}:</label>
                                                 <input class="form-control form-outline " type="text" id="wfh" value="{{$balance22}}" name="wfh" placeholder="" >
-
                                             </div>
+                                            <div class="form-group  col-sm-6 flex-column d-flex">
+                                              <label class="form-control-label  px-1">{{__('showuser.study')}}:</label>
+                                              <input class="form-control form-outline " type="text" id="study"  value="{{$balance23}}" name="study" placeholder="" >
+
+                                          </div>
                                            
                                         </div>
 

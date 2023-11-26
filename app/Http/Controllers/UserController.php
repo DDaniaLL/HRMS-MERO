@@ -465,41 +465,57 @@ class UserController extends Controller
                         ->all();
                 });
 
-                $leave1 = $subsets->firstwhere('leavetype_id', '1');
-                $balance1 = round($leave1['value'],3);
+                 //annual leave
+                 $leave1 = $subsets->firstwhere('leavetype_id', '1');
+                 $balance1 = round($leave1['value'],3);
 
-                $leave8 = $subsets->firstwhere('leavetype_id', '8');
-                $balance8 = round($leave8['value'],3);
+                 //sick leave sc
+                 $leave4 = $subsets->firstwhere('leavetype_id', '4');
+                 $balance4 = round($leave4['value'],3);
 
-                $leave9 = $subsets->firstwhere('leavetype_id', '9');
-                $balance9 = round($leave9['value'],3);
+                 //sick leave dc
+                 $leave7 = $subsets->firstwhere('leavetype_id', '7');
+                 $balance7 = round($leave7['value'],3);
 
-                $leave12 = $subsets->firstwhere('leavetype_id', '12');
-                $balance12 = round($leave12['value'],3);
+                 //maternity leave
+                 $leave11 = $subsets->firstwhere('leavetype_id', '11');
+                 $balance11 = round($leave11['value'],3);
 
-                $leave15 = $subsets->firstwhere('leavetype_id', '15');
-                $balance15 = round($leave15['value'],3);
+                 //paternity leave
+                 $leave12 = $subsets->firstwhere('leavetype_id', '12');
+                 $balance12 = round($leave12['value'],3);
 
-                $leave24 = $subsets->firstwhere('leavetype_id', '24');
-                $balance24 = round($leave24['value'],3);
+                 
+                 //compassionate/welfare leave
+                 $leave13 = $subsets->firstwhere('leavetype_id', '13');
+                 $balance13 = round($leave13['value'],3);
 
-                $leave25 = $subsets->firstwhere('leavetype_id', '25');
-                $balance25 = round($leave25['value'],3);
-        
-                $leave26 = $subsets->firstwhere('leavetype_id', '26');
-                $balance26 = round($leave26['value'],3);
+
+                 //home leave
+                 $leave16 = $subsets->firstwhere('leavetype_id', '16');
+                 $balance16 = round($leave16['value'],3);
+
+
+                 //work from home
+                 $leave22 = $subsets->firstwhere('leavetype_id', '22');
+                 $balance22 = round($leave22['value'],3);
+
+                 //study leave
+                 $leave23 = $subsets->firstwhere('leavetype_id', '23');
+                 $balance23 = round($leave23['value'],3);     
 
         
                 return view('admin.users.balanceedit', [
                     'user' => $user,
                     'balance1' => $balance1,
-                    'balance8' => $balance8,
-                    'balance9' => $balance9,
+                    'balance4' => $balance4,
+                    'balance7' => $balance7,
+                    'balance11' => $balance11,
                     'balance12' => $balance12,
-                    'balance15' => $balance15,
-                    'balance24' => $balance24,
-                    'balance25' => $balance25,
-                    'balance26' => $balance26,
+                    'balance13' => $balance13,
+                    'balance16' => $balance16,
+                    'balance22' => $balance22,
+                    'balance23' => $balance23,
                 ]);
             }
             else
@@ -512,79 +528,63 @@ class UserController extends Controller
                     ->only(['value', 'leavetype_id'])
                     ->all();
             });
-            $leave1 = $subsets->firstwhere('leavetype_id', '1');
-            $balance1 = $leave1['value'];
-    
-            $leave2 = $subsets->firstwhere('leavetype_id', '2');
-            $balance2 = $leave2['value'];
-    
-            $leave3 = $subsets->firstwhere('leavetype_id', '3');
-            $balance3 = $leave3['value'];
-    
-            $leave4 = $subsets->firstwhere('leavetype_id', '4');
-            $balance4 = $leave4['value'];
-    
-            $leave5 = $subsets->firstwhere('leavetype_id', '5');
-            $balance5 = $leave5['value'];
-    
-            $leave6 = $subsets->firstwhere('leavetype_id', '6');
-            $balance6 = $leave6['value'];
-    
-            $leave7 = $subsets->firstwhere('leavetype_id', '7');
-            $balance7 = $leave7['value'];
-    
-            $leave8 = $subsets->firstwhere('leavetype_id', '8');
-            $balance8 = $leave8['value'];
-    
-            $leave9 = $subsets->firstwhere('leavetype_id', '9');
-            $balance9 = $leave9['value'];
-    
-            $leave10 = $subsets->firstwhere('leavetype_id', '10');
-            $balance10 = $leave10['value'];
-    
-            $leave11 = $subsets->firstwhere('leavetype_id', '11');
-            $balance11 = $leave11['value'];
-    
-            $leave12 = $subsets->firstwhere('leavetype_id', '12');
-            $balance12 = $leave12['value'];
-    
-            // $leave13 = $subsets->firstwhere('leavetype_id', '13');
-            // $balance13 = $leave13['value'];
-    
-            // $leave14 = $subsets->firstwhere('leavetype_id', '14');
-            // $balance14 = $leave14['value'];
-    
-            $leave15 = $subsets->firstwhere('leavetype_id', '15');
-            $balance15 = $leave15['value'];
-    
-            // $leave16 = $subsets->firstwhere('leavetype_id', '16');
-            // $balance16 = $leave16['value'];
-    
-            // $leave17 = $subsets->firstwhere('leavetype_id', '17');
-            // $balance17 = $leave17['value'];
-            $leave18 = $subsets->firstwhere('leavetype_id', '18');
-            $balance18 = $leave18['value'];
-    
+             //annual leave
+             $leave1 = $subsets->firstwhere('leavetype_id', '1');
+             $balance1 = round($leave1['value'],3);
+     
+             //sick leave sc
+             $leave4 = $subsets->firstwhere('leavetype_id', '4');
+             $balance4 = round($leave4['value'],3);
+     
+             //sick leave dc
+             $leave7 = $subsets->firstwhere('leavetype_id', '7');
+             $balance7 = round($leave7['value'],3);
+             
+             //marriage leave
+             $leave10 = $subsets->firstwhere('leavetype_id', '10');
+             $balance10 = round($leave10['value'],3);
 
+             //maternity leave
+             $leave11 = $subsets->firstwhere('leavetype_id', '11');
+             $balance11 = round($leave11['value'],3);
 
-        
+             //paternity leave
+             $leave12 = $subsets->firstwhere('leavetype_id', '12');
+             $balance12 = round($leave12['value'],3);
 
+             //compassionate/welfare leave
+             $leave13 = $subsets->firstwhere('leavetype_id', '13');
+             $balance13 = round($leave13['value'],3);
+
+             //pilgiramge
+             $leave14 = $subsets->firstwhere('leavetype_id', '14');
+             $balance14 = round($leave14['value'],3);
+     
+             //cto
+             $leave20 = $subsets->firstwhere('leavetype_id', '20');
+             $balance20 = round($leave20['value'],3);
+     
+             //work from home
+             $leave22 = $subsets->firstwhere('leavetype_id', '22');
+             $balance22 = round($leave22['value'],3);
+
+             //study leave
+             $leave23 = $subsets->firstwhere('leavetype_id', '23');
+             $balance23 = round($leave23['value'],3);
+   
             return view('admin.users.balanceedit', [
                 'user' => $user,
                 'balance1' => $balance1,
-                'balance2' => $balance2,
-                'balance3' => $balance3,
                 'balance4' => $balance4,
-                'balance5' => $balance5,
-                'balance6' => $balance6,
                 'balance7' => $balance7,
-                'balance8' => $balance8,
-                'balance9' => $balance9,
                 'balance10' => $balance10,
                 'balance11' => $balance11,
                 'balance12' => $balance12,
-                'balance15' => $balance15,
-                'balance18' => $balance18,
+                'balance13' => $balance13,
+                'balance14' => $balance14,
+                'balance20' => $balance20,
+                'balance22' => $balance22,
+                'balance23' => $balance23,           
             ]);
             }
 

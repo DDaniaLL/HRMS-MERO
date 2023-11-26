@@ -17,7 +17,7 @@ class LeavetypeTableSeeder extends Seeder
         // id=1
         DB::table('leavetypes')->insert([
             'name' => 'Annual leave',
-            'value' => '21',
+            'value' => '20',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -25,7 +25,7 @@ class LeavetypeTableSeeder extends Seeder
          // id=2
          DB::table('leavetypes')->insert([
             'name' => 'Annual leave - First half',
-            'value' => '21',
+            'value' => '20',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -33,7 +33,7 @@ class LeavetypeTableSeeder extends Seeder
         // id=3
         DB::table('leavetypes')->insert([
             'name' => 'Annual leave - Second half',
-            'value' => '21',
+            'value' => '20',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

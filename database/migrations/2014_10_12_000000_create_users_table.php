@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('employee_number')->unique()->nullable();
             $table->string('contract')->nullable();
             $table->string('position')->nullable();
+            $table->string('grade')->nullable();
             $table->string('office')->nullable();
             $table->string('department')->nullable();
             $table->string('linemanager')->nullable();

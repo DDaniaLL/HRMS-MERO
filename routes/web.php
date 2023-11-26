@@ -38,7 +38,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/change-language/{locale}', function ($locale) {
-    if (! in_array($locale, ['en', 'ar','ku'])) {
+    if (! in_array($locale, ['en', 'ar'])) {
         abort(404);
     }
     DB::table('users')->where('id', Auth::user()->id)->update(

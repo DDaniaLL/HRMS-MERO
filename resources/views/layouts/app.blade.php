@@ -24,8 +24,6 @@
   <!-- Theme style -->
   @if (App::isLocale('ar'))
   <link rel="stylesheet" href="{{ asset('fronththeme') }}/dist/css/fronththeme.rtl.min.css">
-  @elseif (App::isLocale('ku'))
-  <link rel="stylesheet" href="{{ asset('fronththeme') }}/dist/css/fronththeme.rtl.min.css">
   @else
   <link rel="stylesheet" href="{{ asset('fronththeme') }}/dist/css/fronththeme.min.css">
   @endif
@@ -90,8 +88,6 @@
       <a class="dropdown-item" href="{{ route('locale',['locale'=>'en']) }}">English</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="{{ route('locale',['locale'=>'ar']) }}" >العربية</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="{{ route('locale',['locale'=>'ku']) }}" >کوردی</a>
     </div>
   </li>
   <li class="nav-item dropdown">

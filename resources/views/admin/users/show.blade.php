@@ -191,44 +191,55 @@
                           <div class="row">
                               <div class="col">
                               @if ($user->contract == "International")
-                              <strong>{{__('showuser.homeleave')}}:</strong> {{$balance12}}
+                              <strong>{{__('showuser.homeleave')}}:</strong> {{$balance16}}
                               <br>
-                                  <strong>{{__('showuser.r&r')}}:</strong> {{$balance11}}
-                                <br>
+                                  {{-- <strong>{{__('showuser.r&r')}}:</strong> {{$balance11}}
+                                <br> --}}
                                 <strong>{{__('showuser.annualLeave')}}:</strong> {{$balance1}}
                                 <br>
                                 <strong>{{__('createLeave.wfh')}}:</strong> {{$balance22}}
+                                <br>
+                                <strong>{{__('showuser.sickLeaveSC')}}:</strong> {{$balance4}}
+                                <br>
+                                <strong>{{__('showuser.sickLeaveDC')}}:</strong> {{$balance7}}
+                                  <br>
+                                  <strong>{{__('showuser.maternityLeave')}}:</strong> {{$balance11}}
+                                  <br>
+                                  <strong>{{__('showuser.paternityLeave')}}:</strong> {{$balance12}}
+                                  <br>
+                                  <strong>{{__('showuser.welfare')}}:</strong> {{$balance13}}
+                                  <br>
+                                  <strong>{{__('showuser.study')}}:</strong> {{$balance23}}
+                                
                               @endif
                                   
                                   @if ($user->contract == "National")
                                   <strong>{{__('showuser.annualLeave')}}:</strong> {{$balance1}}
                                   <br>
-                                  
-
-                                  <strong>{{__('showuser.sickLeaveSC')}}:</strong> {{$balance2}}
+                                  <strong>{{__('showuser.sickLeaveSC')}}:</strong> {{$balance4}}
                                   <br>
-                                  <strong>{{__('showuser.sickLeaveDC')}}:</strong> {{$balance3}}
+                                  <strong>{{__('showuser.sickLeaveDC')}}:</strong> {{$balance7}}
                                     <br>
                                    
-                                  <strong>{{__('showuser.marriageLeave')}}:</strong> {{$balance5}}
+                                  <strong>{{__('showuser.marriageLeave')}}:</strong> {{$balance10}}
                                     <br>
-                                    <strong>{{__('showuser.compassionateSecondDegree')}}:</strong> {{$balance7}}
+                                    <strong>{{__('showuser.compassionateSecondDegree')}}:</strong> {{$balance13}}
                                     <br>
                                     <strong>{{__('createLeave.wfh')}}:</strong> {{$balance22}}
                                 </div>
 
                                 <div class="col">
-                                    <strong>{{__('showuser.unpaidLeave')}}:</strong> {{$balance15}}
+                                    {{-- <strong>{{__('showuser.unpaidLeave')}}:</strong> {{$balance15}}
+                                    <br> --}}
+                                    <strong>{{__('showuser.maternityLeave')}}:</strong> {{$balance11}}
                                     <br>
-                                    <strong>{{__('showuser.maternityLeave')}}:</strong> {{$balance8}}
+                                    <strong>{{__('showuser.paternityLeave')}}:</strong> {{$balance12}}
                                     <br>
-                                    <strong>{{__('showuser.paternityLeave')}}:</strong> {{$balance9}}
-                                    <br>
-                                    <strong>{{__('showuser.PilgrimageLeave')}}:</strong> {{$balance10}}
+                                    <strong>{{__('showuser.PilgrimageLeave')}}:</strong> {{$balance14}}
                                   <br>
-                              
-                                  
-                                  <strong>{{__('showuser.compansetion')}}:</strong> {{$balance18}}
+                                  <strong>{{__('showuser.compansetion')}}:</strong> {{$balance20}}
+                                  <br>
+                                  <strong>{{__('showuser.study')}}:</strong> {{$balance23}}
                                   </div>
                                   @endif
 

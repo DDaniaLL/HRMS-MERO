@@ -5,6 +5,7 @@ return [
     'allUsers' => 'All users' ,
     'createNewUser' => 'Create a new user' ,
     'export' => 'Export',
+    'contract' => 'Contract',
     'name' => 'Name',
     'employeeId' => 'EmployeeID',
     'position' => 'Position',

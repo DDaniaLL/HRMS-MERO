@@ -32,7 +32,7 @@ class Balance extends Mailable implements ShouldQueue
     {
         return $this
         ->from('hr360@systems.nrc.no', 'HR 360')
-        ->subject('Balance update - Iraq')
+        ->subject('Balance update - MERO')
         ->markdown('emails.balance');
     }
 }

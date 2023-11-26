@@ -5,6 +5,7 @@ return [
     'allUsers' => 'جميع الموظفين' ,
     'createNewUser' => 'إنشاء حساب جديد' ,
     'export' => 'تصدير',
+    'contract' => 'العقد',
     'name' => 'الاسم',
     'employeeId' => 'رقم الموظف',
     'position' => 'المنصب',

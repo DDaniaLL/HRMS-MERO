@@ -35,6 +35,7 @@ return new class extends Migration
             $table->foreignId('usertype_id')->nullable();
             $table->string('preflang')->nullable()->default('en');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -216,12 +216,12 @@
                                             {{__('edituser.InternationalContract')}}
                                             </label>
                                           </div> 
-                                          <div class="form-check">
+                                          {{-- <div class="form-check">
                                             <input  class="btn-check" type="radio" name="contract" Value="NA" id="na" {{ $contract=='NA' ? ' checked' : '' }}>
                                             <label class="form-check-label" for="na">
                                             {{__('edituser.notAvaillable')}}
                                             </label>
-                                          </div> 
+                                          </div>  --}}
                                         </div>
 
                                         </div>

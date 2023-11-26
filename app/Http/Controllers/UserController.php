@@ -317,10 +317,9 @@ class UserController extends Controller
             'contract' ,
             'position',
             'department',
-            'vip',
             'grade'=> 'required',
             'joined_date' => 'required',
-            'contract_enddate' => 'required',
+            // 'contract_enddate' => 'required',
             'linemanager',
             'hradmin',
             'email'  => 'required|email|unique:users,email,' .$user->id,
@@ -339,14 +338,12 @@ class UserController extends Controller
 
         $user->name = $request->name;
         $user->employee_number = $request->employee_number;
-        $user->birth_date = $request->birth_date;
         $user->contract = $request->contract;
         $user->position = $request->position;
         $user->department = $request->department;
         $user->grade = $request->grade;
         $user->linemanager = $request->linemanager;
         $user->joined_date = $request->joined_date;
-        $user->contract_enddate = $request->contract_enddate;
         if ($hruser->superadmin == "yes")
         {
             $user->hradmin = $request->hradmin;
@@ -367,7 +364,7 @@ class UserController extends Controller
         ])->get();
 
 
-        if ($checkifuserhasleave->isEmpty() && $user->id > 390 && $mustchangeannual == "1") {
+        if ($checkifuserhasleave->isEmpty() && $mustchangeannual == "1") {
 
             $yearr = date('Y', strtotime($user->joined_date));
             $dayy = date('d', strtotime($user->joined_date));

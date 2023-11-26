@@ -139,7 +139,7 @@ class LeavetypeTableSeeder extends Seeder
         // id=16
         DB::table('leavetypes')->insert([
             'name' => 'Home Leave',
-            'value' => '30',
+            'value' => '2',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

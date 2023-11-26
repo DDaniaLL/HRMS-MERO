@@ -97,14 +97,11 @@
                             <div class="col">
                                 <strong>{{__('showuser.fullName')}}: </strong> {{$user->name}}
                                 <br>
-                              
                                 <strong>{{__('showuser.email')}}: </strong> {{$user->email}}
                                 <br>
                                 <strong>{{__('showuser.employeeId')}}: </strong> {{$user->employee_number}}
                                 <br>
                                 <strong>{{__('showuser.contractType')}}: </strong> {{__("databaseLeaves.$user->contract")}}
-                                <br>
-                                {{-- <strong>{{__('showuser.office')}}: </strong> {{$user->office}} --}}
                                 <br>
                                 <strong>{{__('showuser.prob')}}: </strong> 
                            
@@ -188,32 +185,36 @@
                         </div>
                         <div class="card-body">
                
-                          <div class="row">
-                              <div class="col">
-                              @if ($user->contract == "International")
-                              <strong>{{__('showuser.homeleave')}}:</strong> {{$balance16}}
-                              <br>
-                                  {{-- <strong>{{__('showuser.r&r')}}:</strong> {{$balance11}}
-                                <br> --}}
-                                <strong>{{__('showuser.annualLeave')}}:</strong> {{$balance1}}
-                                <br>
-                                <strong>{{__('createLeave.wfh')}}:</strong> {{$balance22}}
-                                <br>
+                          @if ($user->contract == "International")
+                        <div class="row">
+                          <div class="col">
+                          <strong>{{__('showuser.annualLeave')}}:</strong> {{$balance1}}
+                              <br>                              
                                 <strong>{{__('showuser.sickLeaveSC')}}:</strong> {{$balance4}}
                                 <br>
                                 <strong>{{__('showuser.sickLeaveDC')}}:</strong> {{$balance7}}
                                   <br>
-                                  <strong>{{__('showuser.maternityLeave')}}:</strong> {{$balance11}}
+                                  <strong>{{__('showuser.homeleave')}}:</strong> {{$balance16}}
                                   <br>
-                                  <strong>{{__('showuser.paternityLeave')}}:</strong> {{$balance12}}
+                                  <strong>{{__('showuser.welfareLeave')}}:</strong> {{$balance13}}
                                   <br>
-                                  <strong>{{__('showuser.welfare')}}:</strong> {{$balance13}}
+                                  <strong>{{__('showuser.wfh')}}:</strong> {{$balance22}}
                                   <br>
-                                  <strong>{{__('showuser.study')}}:</strong> {{$balance23}}
-                                
-                              @endif
-                                  
-                                  @if ($user->contract == "National")
+                                </div>
+                                    <div class="col">
+
+                                      <strong>{{__('showuser.maternityLeave')}}:</strong> {{$balance11}}
+                                      <br>
+                                      <strong>{{__('showuser.paternityLeave')}}:</strong> {{$balance12}}
+                                      <br>
+                                      <strong>{{__('showuser.study')}}:</strong> {{$balance23}}
+                                    </div>
+                                  </div>
+                                  @endif
+                              @if ($user->contract == "National")
+                                                        <div class="row">
+                                                            <div class="col">
+                                                       
                                   <strong>{{__('showuser.annualLeave')}}:</strong> {{$balance1}}
                                   <br>
                                   <strong>{{__('showuser.sickLeaveSC')}}:</strong> {{$balance4}}
@@ -223,9 +224,9 @@
                                    
                                   <strong>{{__('showuser.marriageLeave')}}:</strong> {{$balance10}}
                                     <br>
-                                    <strong>{{__('showuser.compassionateSecondDegree')}}:</strong> {{$balance13}}
+                                    <strong>{{__('showuser.welfareLeave')}}:</strong> {{$balance13}}
                                     <br>
-                                    <strong>{{__('createLeave.wfh')}}:</strong> {{$balance22}}
+                                    <strong>{{__('showuser.wfh')}}:</strong> {{$balance22}}
                                 </div>
 
                                 <div class="col">

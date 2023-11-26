@@ -19,7 +19,7 @@ return [
     'permissionOnHrms' => 'Permissions on HR360' ,
     'notAdmin' => 'Not Admin' ,
     'contractType' => 'Contract Type' ,
-    'reqularContract' => 'Reqular Contract' ,
+    'NationalContract' => 'National Contract' ,
     'internationalContract' => 'International Contract' ,
     'serviceContract' => 'Service Contract' ,
     'notAvaillable' => 'Not Available' ,

@@ -156,7 +156,7 @@ class BalanceTableSeeder extends Seeder
             'name' => 'Home Leave',
             'leavetype_id' => '16',
             'user_id' => '1',
-            'value' => '30',
+            'value' => '2',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

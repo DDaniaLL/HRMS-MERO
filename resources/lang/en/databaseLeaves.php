@@ -51,6 +51,7 @@ return [
     'Monday' => 'Monday',
     'Tuesday' => 'Tuesday',
     'International' => 'International',
+    'National' => 'National',
     'Wednesday' => 'Wednesday',
     'Thursday' => 'Thursday',
     'Friday' => 'Friday',

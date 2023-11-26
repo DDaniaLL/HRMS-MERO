@@ -104,8 +104,8 @@
                                      </div>
 
                                      <div class="form-group {{ $errors->has('email') ? ' has-danger' : '' }} col-sm-6 flex-column d-flex">
-                                              <label class="form-control-label px-1">{{__('createUser.email')}} <small>({{__('createUser.emailforgrades')}})</small></label>
-                                               <input class="form-control form-outline {{ $errors->has('email') ? ' is-invalid' : '' }}"  type="email" id="email"  name="email" autocomplete="off" value="{{ old('email') }}" placeholder="" >
+                                              <label class="form-control-label required px-1">{{__('createUser.email')}}</label>
+                                               <input class="form-control form-outline {{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" id="email"  name="email" autocomplete="off" value="{{ old('email') }}" placeholder="" >
                                                 @if ($errors->has('email'))
                                                 <span id="email-error" class="error text-danger" for="input-email">{{ $errors->first('email') }}</span>
                                                @endif 
@@ -138,15 +138,15 @@
                                           <div class="form-check">
                                             <input  class="btn-check" type="radio" name="contract" Value="International" id="International" @if (old('contract') == "International") {{ 'checked' }} @endif>
                                             <label class="form-check-label" for="International">
-                                            {{__('createUser.InternationalContract')}}
+                                            {{__('createUser.internationalContract')}}
                                             </label>
                                           </div> 
-                                          <div class="form-check">
+                                          {{-- <div class="form-check">
                                             <input  class="btn-check" type="radio" name="contract" Value="NA" id="na" @if (old('contract') == "NA") {{ 'checked' }} @endif>
                                             <label class="form-check-label" for="na">
                                             {{__('createUser.notAvaillable')}}
                                             </label>
-                                          </div> 
+                                          </div>  --}}
                                         </div>
                                        
 

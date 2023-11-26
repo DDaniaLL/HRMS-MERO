@@ -77,12 +77,13 @@
                                       <div class="row justify-content-between text-left">
                                         <div class="form-group  col-sm-6 flex-column d-flex">
                                           <label class="form-control-label  px-1">{{__('showuser.welfareLeave')}}:</label>
-                                          <input class="form-control form-outline " type="text" id="showuser.welfareLeave" value="{{$balance13}}" name="compassionateSecondDegree" placeholder="" >
+                                          <input class="form-control form-outline " type="text" id="welfareLeave" value="{{$balance13}}" name="welfareLeave" placeholder="" >
                                       </div>
-                                        {{-- <div class="form-group  col-sm-6 flex-column d-flex">
-                                            <label class="form-control-label  px-1">{{__('showuser.paternityLeave')}}:</label>
-                                            <input class="form-control form-outline " type="text" id="paternityLeave"  value="{{$balance12}}" name="paternityLeave" placeholder="" >
-                                        </div> --}}
+                                      <div class="form-group  col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label  px-1">{{__('showuser.study')}}:</label>
+                                        <input class="form-control form-outline " type="text" id="study"  value="{{$balance23}}" name="study" placeholder="" >
+
+                                    </div>
                                     </div>
                                         @endif
                                         @if ($user->contract == "National")
@@ -109,7 +110,7 @@
                                         <div class="row justify-content-between text-left">
                                             <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.welfareLeave')}}:</label>
-                                                <input class="form-control form-outline " type="text" id="showuser.welfareLeave" value="{{$balance13}}" name="compassionateSecondDegree" placeholder="" >
+                                                <input class="form-control form-outline " type="text" id="welfareLeave" value="{{$balance13}}" name="welfareLeave" placeholder="" >
                                             </div>
                                             {{-- <div class="form-group  col-sm-6 flex-column d-flex">
                                                 <label class="form-control-label  px-1">{{__('showuser.unpaidLeave')}}:</label>

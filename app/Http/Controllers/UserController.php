@@ -886,7 +886,7 @@ class UserController extends Controller
  
 
         if ($start_date == null) {
-            $start_datee = '2000-01-01';
+            $start_datee = '1980-01-01';
         } elseif ($start_date !== null) {
             $start_datee = $start_date;
         }
@@ -898,7 +898,7 @@ class UserController extends Controller
         }
 
         if ($contract == null) {
-            $contracte = ['Natioanl', 'International', 'NA'];
+            $contracte = ['National', 'International', 'NA'];
         } elseif ($contract !== null) {
             $contracte = $contract;
         }

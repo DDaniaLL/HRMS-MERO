@@ -132,8 +132,8 @@ $hruser = Auth::user();
                                                    
 
                                                     <option value="National">{{__('createUser.NationalContract')}}</option>
-                                                    <option value="International">{{__('createUser.InternationalContract')}}</option>
-                                                    <option value="NA">{{__('createUser.notAvaillable')}}</option>
+                                                    <option value="International">{{__('createUser.internationalContract')}}</option>
+                                                    {{-- <option value="NA">{{__('createUser.notAvaillable')}}</option> --}}
                                                     
 
 

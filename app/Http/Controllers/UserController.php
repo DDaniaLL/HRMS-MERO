@@ -760,7 +760,7 @@ class UserController extends Controller
 
         if ($start_date == Null)
         {
-            $start_datee = "2000-01-01";
+            $start_datee = "1980-01-01";
         }
 
         else if ($start_date !== Null)

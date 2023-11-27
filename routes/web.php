@@ -396,22 +396,19 @@ Route::group(['middleware' => ['auth', 'checkstatus']], function () {
                 ->only(['value', 'leavetype_id'])
                 ->all();
         });
+        //national or international annual leave
         $leave1 = $subsets->firstwhere('leavetype_id', '1');
         $balance1 = round($leave1['value'], 3);
 
-        $leave2 = $subsets->firstwhere('leavetype_id', '2');
-        $balance2 = round($leave2['value'], 3);
+       //international home leave
+        $leave16 = $subsets->firstwhere('leavetype_id', '16');
+        $balance16 = round($leave16['value'], 3);
 
-        $leave11 = $subsets->firstwhere('leavetype_id', '11');
-        $balance11 = round($leave11['value'], 3);
+        //national CTO
+        $leave20 = $subsets->firstwhere('leavetype_id', '20');
+        $balance20 = round($leave20['value'], 3);
 
-        $leave12 = $subsets->firstwhere('leavetype_id', '12');
-        $balance12 = round($leave12['value'], 3);
-
-        $leave18 = $subsets->firstwhere('leavetype_id', '18');
-        $balance18 = round($leave18['value'], 3);
-
-        return view('dashboard', ['user' => $user, 'balance1' => $balance1, 'balance2' => $balance2, 'balance11' => $balance11, 'balance12' => $balance12, 'balance18' => $balance18]);
+        return view('dashboard', ['user' => $user, 'balance1' => $balance1, 'balance16' => $balance16, 'balance20' => $balance20]);
     })->name('welcome');
 
     Route::get('leaves/approval', function () {

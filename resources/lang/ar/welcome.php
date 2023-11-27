@@ -17,6 +17,7 @@ return [
     'SickleaveSC' => 'طلبات الاجازة المرضية (شهادة ذاتية) المتبقي' ,
     'remainingBalance' => 'رصيد الإجازات المتبقي' ,
     'annualLeave' => 'الإجازات السنوية' ,
+    'homeleave' => 'الاجازة المنزلية' ,
     'sickLeave' => 'الإجازات المرضية' ,
     'compensationLeaveDays' => 'الإجازات التعويضية' 
 ];

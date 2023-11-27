@@ -12,6 +12,7 @@ return [
     'starthour' => 'Start Hour',
     'endhour' => 'End Hour' ,
     'hours' => 'Hours' ,
+    'value' => 'Value' ,
     'status' => 'Status',
     'action' => 'Action' ,
 ];

@@ -125,24 +125,7 @@
                                          
                                              
                                             </div>
-                                            <div class="col justify-content-between text-left">
-                                              @if (count($userss))
-                                              <div class="form-group col-sm-12 flex-column d-flex">
-                                                <label class="form-control-label px-1">{{__('createLeave.substaff')}}</label>
-                                                <input class="form-control form-outline" type="text" list="FavoriteColor" id="mystaff"  name="mystaff" placeholder="" autocomplete="off">
-                                                        <datalist id="FavoriteColor">
-                                                            @foreach ($userss as $userr)
-                                                                <option value="{{$userr->employee_number}}">{{$userr->name}}</option>
-                                                            @endforeach
-                                                        </datalist>
-                                                        </p>
-                                        </div>
-                                              @endif
-  
-  
-                                                  
-                                          </div>
-
+                                            
                                           <div class="form-group  {{ $errors->has('date') ? ' has-danger' : '' }} col-sm-6 flex-column d-flex" >
                                             
                                               <label for="date" class="form-control-label required px-1" >{{__('createOvertime.Date')}}</label>

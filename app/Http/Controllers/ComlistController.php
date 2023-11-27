@@ -25,10 +25,11 @@ class ComlistController extends Controller
                 ->all();
         });
 
-        $leave18 = $subsets->firstwhere('leavetype_id', '18');
-        $balance18 = round($leave18['value'], 3);
+        //cto
+        $leave20 = $subsets->firstwhere('leavetype_id', '20');
+        $balance20 = round($leave20['value'], 3);
 
-        return view('comlists.index', ['comlists' => $comlist, 'balance18' => $balance18]);
+        return view('comlists.index', ['comlists' => $comlist, 'balance20' => $balance20]);
     }
 
     /**

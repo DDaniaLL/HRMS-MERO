@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\OvertimesExport;
+use App\Mail\Overtime as MailOvertime;
+use App\Mail\Overtimeafterlm as MailOvertimeafterlm;
+use App\Mail\Overtimefinal as MailOvertimefinal;
+use App\Mail\Overtimerejected as MailOvertimerejected;
 use App\Models\Balance;
 use App\Models\Overtime;
 use App\Models\User;
@@ -131,15 +136,15 @@ class OvertimeController extends Controller
                 ];
                 Mail::to($linemanageremail)->send(new MailOvertime($details));
             }
-            if ($overtime->type == 'workday' && $user->grade < '3')
+            if ($overtime->type == 'workday')
             {
-                $overtime->value = $last * 1.5;
+                $overtime->value = $last * 1.25;
             }
-            elseif ($overtime->type == 'workday' || $user->contract !== "National") {
-                $overtime->value = $last * 1;
-            }
+            // elseif ($overtime->type == 'workday' || $user->contract !== "National") {
+            //     $overtime->value = $last * 1;
+            // }
             else {
-                $overtime->value = $last * 2;
+                $overtime->value = $last * 1.5;
             }
 
             $overtime->save();
@@ -333,7 +338,7 @@ class OvertimeController extends Controller
         $overtime->hrcomment = $request->comment;
         $overtime->save();
 
-        if ($overtime->type == 'week-end' || $overtime->type == 'holiday' || $overtime->type == 'SC-overtime') {
+        if ($overtime->type == 'week-end' || $overtime->type == 'holiday') {
             $partialstoannual = $overtime->hours / 8;
            
             $user = $overtime->user;
@@ -361,7 +366,7 @@ class OvertimeController extends Controller
                     ->only(['value', 'leavetype_id'])
                     ->all();
             });
-            $final = $subsets->firstwhere('leavetype_id', '18');
+            $final = $subsets->firstwhere('leavetype_id', '20');
 
             $finalfinal = $final['value'];
             $currentbalance = $finalfinal;
@@ -370,51 +375,51 @@ class OvertimeController extends Controller
 
             Balance::where([
                 ['user_id', $overtime->user->id],
-                ['leavetype_id', '18'],
+                ['leavetype_id', '20'],
             ])->update(['value' => $newbalance]);
         }
 
 
-        if ($overtime->type == 'workday') {
-            $partialstoannual = $overtime->value / 8;
+        // if ($overtime->type == 'workday') {
+        //     $partialstoannual = $overtime->value / 8;
            
-            $user = $overtime->user;
-            $dateafter3months = Carbon::now()->addMonths(3);
-            $dateafter3monthsnewasdate = new DateTime($dateafter3months);
-            $dateafter3monthsnewasdatefinal = $dateafter3monthsnewasdate->format('Y-m-d');
+        //     $user = $overtime->user;
+        //     $dateafter3months = Carbon::now()->addMonths(3);
+        //     $dateafter3monthsnewasdate = new DateTime($dateafter3months);
+        //     $dateafter3monthsnewasdatefinal = $dateafter3monthsnewasdate->format('Y-m-d');
 
-            $overtime->comlists()->create([
-                'user_id' => $user->id,
-                'hours' => $partialstoannual,
-            ]);
+        //     $overtime->comlists()->create([
+        //         'user_id' => $user->id,
+        //         'hours' => $partialstoannual,
+        //     ]);
             
-            $overtime->comlists()->where([
-                ['user_id', $user->id],
-                ['overtime_id',  $overtime->id],
-            ])->update([
-                'autodate' => $dateafter3monthsnewasdatefinal,
-            ]);
+        //     $overtime->comlists()->where([
+        //         ['user_id', $user->id],
+        //         ['overtime_id',  $overtime->id],
+        //     ])->update([
+        //         'autodate' => $dateafter3monthsnewasdatefinal,
+        //     ]);
             
 
-            $balances = Balance::where('user_id', $overtime->user->id)->get();
-            $subsets = $balances->map(function ($balance) {
-                return collect($balance->toArray())
+        //     $balances = Balance::where('user_id', $overtime->user->id)->get();
+        //     $subsets = $balances->map(function ($balance) {
+        //         return collect($balance->toArray())
 
-                    ->only(['value', 'leavetype_id'])
-                    ->all();
-            });
-            $final = $subsets->firstwhere('leavetype_id', '18');
+        //             ->only(['value', 'leavetype_id'])
+        //             ->all();
+        //     });
+        //     $final = $subsets->firstwhere('leavetype_id', '20');
 
-            $finalfinal = $final['value'];
-            $currentbalance = $finalfinal;
+        //     $finalfinal = $final['value'];
+        //     $currentbalance = $finalfinal;
 
-            $newbalance = $currentbalance + $partialstoannual;
+        //     $newbalance = $currentbalance + $partialstoannual;
 
-            Balance::where([
-                ['user_id', $overtime->user->id],
-                ['leavetype_id', '18'],
-            ])->update(['value' => $newbalance]);
-        }
+        //     Balance::where([
+        //         ['user_id', $overtime->user->id],
+        //         ['leavetype_id', '20'],
+        //     ])->update(['value' => $newbalance]);
+        // }
 
 
         $dayname = Carbon::parse($overtime->date)->format('l');

@@ -25,7 +25,7 @@
                         
                         <h4 class="card-title ">
                         <a href="{{ URL::previous() }}"> <i style="font-size: 1.12em;" class="fas fa-arrow-alt-circle-left"></i> </a> 
-                          {{__('comlists.mycomlists')}} - {{__('welcome.compensationLeaveDays')}}: <strong>{{$balance18}}</strong> days</h4>
+                          {{__('comlists.mycomlists')}} - {{__('welcome.compensationLeaveDays')}}: <strong>{{$balance20}}</strong> days</h4>
                           
                         </div>
                         

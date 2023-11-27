@@ -15,7 +15,9 @@ return [
     'lineManager' => 'Line Manager' ,
     'leaves' => 'Leaves' ,
     'remainingBalance' => 'Remaining Balance' ,
-    'annualLeave' => 'Annual Leave' ,
+    'annualLeave' => 'Annual leave' ,
+    'homeleave' => 'Home leave' ,
+
     'SickleaveSC' => 'Sick leave SC requests' ,
     'sickLeave' => 'Sick Leave' ,
     'compensationLeaveDays' => 'Compensation Leave Days' 
